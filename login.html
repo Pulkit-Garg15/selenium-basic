@@ -6,12 +6,12 @@
 <style>   
 Body {  
   font-family: Calibri, Helvetica, sans-serif;  
-  background-color: pink;  
+  background-color: black;  
 }  
 button {   
-       background-color: #4CAF50;   
-       width: 100%;  
-        color: orange;   
+       background-color: #555555;   
+       width: 10%;  
+        color: white;   
         padding: 15px;   
         margin: 10px 0px;   
         border: none;   
@@ -25,7 +25,7 @@ button {
         margin: 8px 0;  
         padding: 12px 20px;   
         display: inline-block;   
-        border: 2px solid green;   
+        border: 2px solid black;   
         box-sizing: border-box;   
     }  
  button:hover {   
@@ -40,7 +40,7 @@ button {
      
  .container {   
         padding: 25px;   
-        background-color: lightblue;  
+        background-color: hsl(290,60%,70%);  
     }   
 </style>   
 </head>    
@@ -48,28 +48,31 @@ button {
     <center> <h1> Student Login Form </h1> </center>   
     <form>  
         <div class="container">   
-            <label>Username : </label>   
+            <label><b>Username :</b> </label>   
             <input type="text" placeholder="Enter Username" name="username" id = "username" required>  
-            <label>Password : </label>   
+            <label><b>Password : </b></label>   
             <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <label><b>Gender : </b></label>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="Female">
             <label for="Female">Female</label> </br>
+            <label><b>Food Preference : </b></label> </br>
             <input type="checkbox" id="veg" name="food"> Veg
             <input type="checkbox" id="nonveg" name="food"> Non Veg
             <input type="checkbox" id="seafood" name="food"> Sea Food
             <input type="checkbox" id="semi" name="food"> Semi Non Veg </br>
+            <label><b>Select your country : </b></label>
             <select name="countries" id="countries" >
              <option value="countries">Countries</option>
              <option value="india">India</option>
              <option value="australia">Australia</option>
              <option value="china">China</option>
-            </select>
+            </select> </br>
             <button type="submit">Login</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <button type="button" class="cancelbtn" id="signin-button"> Cancel</button>   
-            Forgot <a href="#"> password? </a>   
+            <input type="checkbox" checked="checked"> Remember me   </br>
+             Forgot <a href="#"> password? </a>
+            <button type="button" class="cancelbtn" id="signin-button"> Cancel</button>      
         </div>   
     </form>     
 </body>     

@@ -29,17 +29,6 @@ public class Test {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-		System.out.println("Selecting the gender");
-		driver.findElement(By.id("male")).click();
-
-		System.out.println("Choosing the food preference");
-		driver.findElement(By.id("veg")).click();
-
-		WebElement countryDropdown = driver.findElement(By.id("countries"));
-		Select dropdown = new Select(countryDropdown);
-		System.out.println("Choosing country from dropdown menu");
-		dropdown.selectByValue("india");
-
 		WebElement login = driver.findElement(By.id("signin-button"));
 		System.out.println("Clicking on the login element in the main page");
 		login.click();
@@ -57,6 +46,17 @@ public class Test {
 		password.clear();
 		System.out.println("entering the password");
 		password.sendKeys("password@123");
+
+		System.out.println("Selecting the gender");
+		driver.findElement(By.id("male")).click();
+
+		System.out.println("Choosing the food preference");
+		driver.findElement(By.id("veg")).click();
+
+		WebElement countryDropdown = driver.findElement(By.id("countries"));
+		Select dropdown = new Select(countryDropdown);
+		System.out.println("Choosing country from dropdown menu");
+		dropdown.selectByValue("india");
 
 		WebElement gender = driver.findElement(By.id("male"));
 		boolean selectState = gender.isSelected();
